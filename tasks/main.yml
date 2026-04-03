@@ -1,0 +1,18 @@
+---
+# Tasks to deploy cloud-init.yml
+
+- name: Make sure /var/lib/vz/snippets exists
+  ansible.builtin.file:
+    path: /var/lib/vz/snippets
+    owner: root
+    group: root
+    mode: 0755
+    state: directory
+
+- name: Deploy cloud-init.yaml
+  ansible.builtin.copy:
+    src: cloud-init.yaml
+    dest: /var/lib/vz/snippets/cloud-init.yaml
+    owner: root
+    group: synpro
+    mode: 0644
