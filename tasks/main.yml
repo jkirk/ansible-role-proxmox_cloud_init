@@ -14,5 +14,5 @@
     src: cloud-init.yaml
     dest: /var/lib/vz/snippets/cloud-init.yaml
     owner: root
-    group: synpro
+    group: root
     mode: 0644
